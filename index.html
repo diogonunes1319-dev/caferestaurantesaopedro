@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Restaurante São Pedro</title>
+
+    <link rel="stylesheet" href="index.css">
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+
+</head>
+<body>
+    <div id="div_nav" >
+        <img src="logo-café-sem-fundo.png" alt="" id="img_nav">
+
+        <a href="index.html" id="a"><button id="button_nav"  >Página Inicial</button></a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('video-fundo');
+    
+    // Tenta dar play manualmente
+    video.play().catch(function(error) {
+        // Se falhar (ex: modo poupança), tentamos de novo ao primeiro toque no ecrã
+        document.body.addEventListener('touchstart', function() {
+            video.play();
+        }, {once: true});
+    });
+});
+    </script>
+
+    <div id="div_video">
+        <video id="video" autoplay muted loop playsinline webkit-playsinline id="video-fundo">
+            <source src="exemplo.mp4" type="video/mp4">
+            <source src="exemplo.webm" type="video/webm">
+        </video>
+
+        <button id="button_ver_pratos" id="a"> <b>Ver pratos</b></button>
+    </div>
+
+
+
+    <div>
+        <h2 id="h2">O nosso café-restaurante...</h2>
+
+        <p id="p">
+            No nosso café-restaurante encontras um ambiente acolhedor, marcado por sabores tradicionais e por um espírito familiar que já faz parte da freguesia há muitos anos. Trabalhamos diariamente para oferecer refeições caseiras, preparadas com ingredientes frescos e da região, mantendo sempre a essência da culinária portuguesa. Quer seja para um café rápido, um almoço descontraído ou um jantar tranquilo, fazemos questão de receber-te com simpatia e conforto.
+        </p>
+        <img src="" alt="">
+    </div>
+<br><br><br><br><br><br><br>
+    <div id="div_local">
+        
+        <br>
+        
+        <h2 id="h2">Onde nos localizamos...</h2>
+        
+        <br>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1594.887191143518!2d-8.363193324020283!3d39.564479004133155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd187bafaa10d33f%3A0xf479a20ac3bf2899!2sCaf%C3%A9%20Restaurante%20S%C3%A3o%20Pedro!5e0!3m2!1spt-PT!2spt!4v1765147679343!5m2!1spt-PT!2spt" width="90%" height="200px" style="border:2px; margin-left: 4.5%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</body>
+</html>
